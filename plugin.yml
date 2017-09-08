@@ -1,0 +1,46 @@
+main: fr.crokis.HalfGuard.Main
+name: HalfGuard
+description: World protection with Owner and Occupant system
+author: crokis
+version: 1.1.1
+commands:
+  claim:
+    description: Claim a new area
+    usage: /claim
+  unclaim:
+    description: Unclaim an area
+    usage: /unclaim
+  where:
+    description: Get informations about current claim
+    usage: /where
+  secure:
+    description: Change secure mode of current claim
+    usage: /secure <public|private>
+  shared:
+    description: Change shared mode of current claim
+    usage: /shared <true|false>
+  halfguard:
+    description: Get help for HalfGuard plugin
+    usage: /halfguard
+  promote:
+    description: Promote player
+    usage: /promote <player>
+  promotelist:
+    description: List all promoted players
+    usage: /promotelist
+  dismiss:
+    description: Dismiss player
+    usage: /dismiss
+    
+permissions:
+  HalfGuard.*:
+    description: Permissions de HalfGuard
+    default: op
+    children:
+      HalfGuard.claim: true
+      HalfGuard.unclaim: true
+      HalfGuard.where: true
+      HalfGuard.changeSecureMode: true
+      HalfGuard.changeSharedMode: true
+      HalfGuard.promote: true
+      HalfGuard.dismiss: true
